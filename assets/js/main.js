@@ -146,6 +146,7 @@ $(function(){
         var $ss_resume_result = $('.ss_resume_result');
 
 
+        $ss_resume_result.find('.name').find('dd').text(name);
         $ss_resume_result.find('.start').find('dd').text(start);
         $ss_resume_result.find('.motive').find('dd').text(motive);
         $ss_resume_result.find('.userid').find('dd').html(userid + '<span class="follow_back">フォロー返'+follow_back+'</span>');
