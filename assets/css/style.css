@@ -587,8 +587,8 @@ form
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   padding: 5px 10px;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   color: #666;
 }
 
@@ -604,6 +604,8 @@ form
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .form_style01 .form_select01:before {
@@ -640,8 +642,8 @@ form
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 6px 28px 5px 14px;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.57143;
 }
 
@@ -665,7 +667,6 @@ form
 }
 
 .form_style01 .form_btn {
-  background: #aaa;
   border-radius: 10px;
   display: block;
   text-align: center;

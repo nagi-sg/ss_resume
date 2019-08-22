@@ -58,7 +58,7 @@
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     padding: 5px 10px;
-    @include font-size(14);
+    @include font-size(16);
     color: #666;
   }
 
@@ -72,6 +72,7 @@
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    @include font-size(16);
 
     &:before{
       font: normal normal normal 14px/1 FontAwesome;
@@ -103,10 +104,9 @@
       box-sizing: border-box;
       position: relative;
       color: #999;
-
       @include box-sizing();
       padding: 6px 28px 5px 14px;
-      @include font-size(14);
+      @include font-size(16);
       line-height: (22 / 14);
     }
     select::-ms-expand {
@@ -129,8 +129,6 @@
   }
 
   .form_btn{
-    background: #aaa;
-
     border-radius: 10px;
     display: block;
     text-align: center;
