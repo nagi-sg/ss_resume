@@ -1,0 +1,348 @@
+// import
+// -------------------------
+@import "variables.scss";
+
+/*
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+/**
+ * YUI Reset
+ * @module reset
+ * @namespace
+ * @requires
+ */
+html {
+    background: $bgColor;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+address,
+button,
+caption,
+cite,
+code,
+dfn,
+em,
+input,
+optgroup,
+option,
+select,
+strong,
+textarea,
+th,
+var {
+    font:inherit;
+}
+b,
+strong{
+    font-weight: bold;
+}
+del,
+ins {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: top;
+    font-size: 9px;
+}
+sub {
+    vertical-align: bottom;
+    font-size: 9px;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+    color: $textColor;
+}
+
+img{
+    vertical-align:bottom;
+}
+div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark{
+    background: url(data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///////wAAACH5BAEHAAIALAAAAAABAAEAAAICVAEAOw==) no-repeat 0 0;
+}
+
+div,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li,
+form,input,textarea,button,table,tr,th,td,
+article,aside,footer,header,nav,section{
+    @include box-sizing();
+}
+
+
+/*- fluid img and objects ----------*/
+img,
+object,
+embed {
+    /* [disabled]max-width: 100%; */
+}
+/*- optional vanity styles ----------*/
+::selection {background: #37BEFF;}
+::-moz-selection {background: #37BEFF;}
+
+img::selection {background: transparent;}
+img::-moz-selection {background: transparent;}
+
+a {-webkit-tap-highlight-color: rgba(0,0,0,0.2);}
+*{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+/**
+ * YUI Fonts
+ * @module fonts
+ * @namespace yui-
+ * @requires
+ */
+
+html{
+    font-size: $baseFontSize+px;
+}
+body {
+    font: $baseFontSize+px/1.35 $font_family_gothic;
+    font: 1rem/1.35 $font_family_gothic;
+    color: $textColor;
+}
+select,
+input,
+textarea,
+button {
+    font-size:99%;
+    line-height:1.5em;
+}
+table {
+    font-size:inherit;
+}
+pre,
+code,
+kbd,
+samp,
+tt {
+    font-family:monospace;
+    *font-size:108%;
+    line-height:100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/*===============================================*
+*	commcon
+*===============================================*/
+/* margin
+------------------------------------------------*/
+$i:0;
+$length:100;
+@while $i <= $length {
+    .mt#{$i} {margin-top:$i+px !important;}
+    .mr#{$i} {margin-right:$i+px !important;}
+    .mb#{$i} {margin-bottom:$i+px !important;}
+    .ml#{$i} {margin-left:$i+px !important;}
+    $i: $i + 5;
+}
+@media (max-width: $BreakPoint1) {
+    $i:0;
+    $length:100;
+    @while $i <= $length {
+        .smt#{$i} {margin-top:$i+px !important;}
+        .smr#{$i} {margin-right:$i+px !important;}
+        .smb#{$i} {margin-bottom:$i+px !important;}
+        .sml#{$i} {margin-left:$i+px !important;}
+        $i: $i + 5;
+    }
+}
+
+/* padding
+------------------------------------------------*/
+$i:0;
+$length:100;
+@while $i <= $length {
+    .pt#{$i} {padding-top:$i+px !important;}
+    .pr#{$i} {padding-right:$i+px !important;}
+    .pb#{$i} {padding-bottom:$i+px !important;}
+    .pl#{$i} {padding-left:$i+px !important;}
+    $i: $i + 5;
+}
+@media (max-width: $BreakPoint1) {
+    $i:0;
+    $length:100;
+    @while $i <= $length {
+        .spt#{$i} {padding-top:$i+px !important;}
+        .spr#{$i} {padding-right:$i+px !important;}
+        .spb#{$i} {padding-bottom:$i+px !important;}
+        .spl#{$i} {padding-left:$i+px !important;}
+        $i: $i + 5;
+    }
+}
+
+/* text-align
+------------------------------------------------*/
+.alignL{text-align:left !important;}
+.alignR{text-align:right !important;}
+.alignC{text-align:center !important;}
+.vAlignM{vertical-align: middle !important;}
+
+/* float
+------------------------------------------------*/
+.floatL{float:left !important; display:inline !important;}
+.floatR{float:right !important; display:inline !important;}
+.floatN{float:none !important;}
+
+/* display
+------------------------------------------------*/
+.disBlock{display:block !important;}
+.disInlBlock{display:inline-block !important;}
+.disInline{display:inline !important;}
+
+/* indent
+------------------------------------------------*/
+.indent1{
+    margin-left:1em;
+    text-indent:-1em;
+}
+
+/* font-weight
+------------------------------------------------*/
+.fwB{
+    font-weight: bold;
+}
+
+/* fontsize
+------------------------------------------------*/
+$i:10;
+$length:50;
+@while $i <= $length {
+    .fs#{$i} {@include font-size($i);}
+    $i: $i + 1;
+}
+
+/* hide
+------------------------------------------------*/
+.sp_hide{
+    display: block !important;
+    @media (max-width: $BreakPoint1) {
+        display: none !important;
+    }
+}
+.pc_hide{
+    display: none !important;
+    @media (max-width: $BreakPoint1) {
+        display: block !important;
+    }
+}
+/* hide
+------------------------------------------------*/
+.hover{
+    @include transition();
+
+    &:hover{
+        @include opacity(0.75);
+    }
+}
+
+/* clearfix
+------------------------------------------------*/
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

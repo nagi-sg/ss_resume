@@ -1,11 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="ja">
 <head>
-	<meta charset="UTF-8">
-	<title>セブンズストーリー履歴書作成ツール - Sevens Story Resume</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<link href="//afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+	<link href="//fonts.googleapis.com/css?family=M+PLUS+1p:400,700,900|M+PLUS+Rounded+1c:400,700,900&display=swap&subset=japanese" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<title>セブンズストーリー 冒険者登録証 作成ツール - Sevens Story Resume</title>
+	<meta name="keywords" content="セブンズストーリー,セブスト,ゲーム,アプリ,アプリゲー">
+	<meta name="description" content="セブンズストーリーのプレイヤー履歴書を作ってTwitterで共有しよう">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="セブンズストーリー履歴書作成ツール - Sevens Story Resume">
+	<meta property="og:description" content="セブンズストーリーのプレイヤー履歴書を作ってTwitterで共有しよう">
+	<meta property="og:url" content="https://nagi-sg.github.io/ss_resume/">
 </head>
-<body>
-<h1>セブンズストーリー履歴書作成ツール</h1>
 
+<body id="top">
+
+<div id="wrap">
+	<header id="header">
+		<div class="description">
+			<div class="inner">
+				<h1>セブンズストーリー 冒険者登録証 作成ツール</h1>
+			</div>
+		</div>
+	</header>
+	<!-- / #header -->
+
+	<div id="contents" class="clearfix">
+
+		<main id="main">
+
+			<div class="ss_resume_input">
+				<form action="." class="form_style01" method="post">
+
+					<div class="row">
+						<div class="col"><label for="name">名前</label></div>
+						<div class="col"><input type="text" id="name" required></div>
+					</div>
+
+					<div class="row">
+						<div class="col"><label for="rank">ランク</label></div>
+						<div class="col"><input type="number" id="rank"></div>
+					</div>
+
+					<div class="row">
+						<div class="col">セブスト歴</div>
+						<div class="col form_select01">
+							<select name="" id="start_y"><option value="2019年">2019年</option><option value="2018年">2018年</option><option value="2017年" selected>2017年</option></select>
+						</div>
+						<div class="col form_select01">
+							<select name="" id="start_m">
+								<option value="1月">1月</option><option value="2月">2月</option><option value="3月">3月</option>
+								<option value="4月">4月</option><option value="5月">5月</option><option value="6月">6月</option>
+								<option value="7月">7月</option><option value="8月" selected>8月</option><option value="9月">9月</option>
+								<option value="10月">10月</option><option value="11月">11月</option><option value="12月">12月</option></select>
+						</div>
+						<div class="col pl5">から</div>
+					</div>
+
+					<div class="row wrap">
+						<div class="col fullsize"><label for="motive">セブストを始めたきっかけ</label></div>
+						<div class="col fullsize"><textarea id="motive"></textarea></div>
+					</div>
+
+					<div class="row">
+						<div class="col"><label for="userid">ユーザーID</label></div>
+						<div class="col"><input type="text" id="userid"></div>
+					</div>
+
+					<div class="row">
+						<div class="col"><label>フォロー返し</label></div>
+						<div class="col">
+							<label for="follow_back1"><input type="radio" name="follow_back" id="follow_back1" value="できる" checked><span>できる</span></label>
+							<label for="follow_back2"><input type="radio" name="follow_back" id="follow_back2" value="できない"><span>できない</span></label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col"><label for="support_character">サポートキャラ</label></div>
+						<div class="col"><input type="text" id="support_character"></div>
+					</div>
+
+					<div class="row">
+						<div class="col"><label for="favorite_character">好きなキャラ</label></div>
+						<div class="col"><input type="text" id="favorite_character"></div>
+					</div>
+
+
+					<div class="row">
+						<div class="col"><label for="favorite_episode">好きなイベント<br>・エピソード</label></div>
+						<div class="col"><input type="text" id="favorite_episode"></div>
+					</div>
+
+					<div class="row wrap">
+						<div class="col fullsize"><label for="userid">好きなコンテンツ</label></div>
+						<div class="col fullsize labelblock">
+							<label for="favorite_content1"><input type="checkbox" name="favorite_content" id="favorite_content1" value="メインストーリー"><span>メインストーリー</span></label>
+							<label for="favorite_content2"><input type="checkbox" name="favorite_content" id="favorite_content2" value="ストーリーイベント"><span>ストーリーイベント</span></label>
+							<label for="favorite_content3"><input type="checkbox" name="favorite_content" id="favorite_content3" value="アリーナ"><span>アリーナ</span></label>
+							<label for="favorite_content4"><input type="checkbox" name="favorite_content" id="favorite_content4" value="ビッグボスバトル"><span>ビッグボスバトル</span></label>
+							<label for="favorite_content5"><input type="checkbox" name="favorite_content" id="favorite_content5" value="高難度クエスト"><span>高難度クエスト</span></label>
+							<label for="favorite_content6"><input type="checkbox" name="favorite_content" id="favorite_content6" value="レイドボス"><span>レイドボス</span></label>
+							<label for="favorite_content7"><input type="checkbox" name="favorite_content" id="favorite_content7" value="緊急クエスト"><span>緊急クエスト</span></label>
+							<label for="favorite_content8"><input type="checkbox" name="favorite_content" id="favorite_content8" value="クエつく"><span>クエつく</span></label>
+							<label for="favorite_content9"><input type="checkbox" name="favorite_content" id="favorite_content9" value="ガーデン"><span>ガーデン</span></label>
+							<label for="favorite_content10"><input type="checkbox" name="favorite_content" id="favorite_content10" value="RunRunラビィ"><span>RunRunラビィ</span></label>
+						</div>
+					</div>
+
+					<div class="row wrap">
+						<div class="col fullsize"><label for="comment">コメント</label></div>
+						<div class="col fullsize"><textarea id="comment" rows="4"></textarea></div>
+					</div>
+
+					<div class="row noborder">
+						<button class="form_btn">これで冒険者登録証を発行する！</button>
+					</div>
+				</form>
+			</div>
+			<!-- / .ss_resume_input -->
+
+
+
+			<div class="ss_resume_result_wrap">
+
+
+
+				<div class="ss_resume_result" id="result">
+					<div class="result_inner">
+						<h2><span>セブスト冒険者登録証</span></h2>
+						<div class="group1">
+							<dl class="name"><dt>名前</dt><dd>なぎ</dd></dl>
+						</div>
+						<div class="group1">
+							<dl class="userid"><dt>ユーザーID</dt><dd>608427060<span class="follow_back">フォロー返できない</span></dd></dl>
+						</div>
+
+
+						<div class="group2">
+							<dl class="rank"><dt>ランク</dt><dd>134</dd></dl>
+							<dl class="start"><dt>いつから</dt><dd>2017年8月から</dd></dl>
+						</div>
+
+						<div class="group2">
+							<dl class="motive"><dt>始めたきっかけ</dt><dd>リリース時にサ終→買収→復活エピソードの記事を読んで興味を持った</dd></dl>
+						</div>
+
+						<div class="group1">
+							<dl class="support_character"><dt>サポートキャラ</dt><dd>持ってればイベ特効</dd></dl>
+						</div>
+						<div class="group1">
+							<dl class="favorite_character"><dt>好きなキャラ</dt><dd>シエラ</dd></dl>
+						</div>
+
+						<div class="group1">
+							<dl class="favorite_episode"><dt>好きなイベント・エピソード</dt><dd>空の上、雲の上</dd></dl>
+
+						</div>
+
+						<div class="group1">
+							<dl class="favorite_content"><dt>好きなコンテンツ</dt><dd>メインストーリー、ストーリーイベント、アリーナ、ビッグボスバトル、高難度クエスト、レイドボス、緊急クエスト、クエつく、ガーデン、RunRunラビィ</dd></dl>
+						</div>
+
+						<div class="group1">
+							<dl class="comment"><dt>コメント</dt><dd>イベントストーリー読むのも好きだし、育成も楽しい！これからもよろしくです！</dd></dl>
+						</div>
+					</div>
+
+				</div>
+				<!-- / .ss_resume_result -->
+				<p class="howto">スクショしてTwitterに貼って使ってね。</p>
+
+			</div>
+
+
+		</main>
+		<!-- / #main -->
+	</div>
+	<!-- / #container -->
+
+
+
+	<footer id="footer">
+		<p>・「セブンズストーリー」は株式会社WithEntertainment様の登録商標です。</p>
+		<p>・本サイトはファンサイトであり、株式会社WithEntertainment様とは一切関係ありません。当サイトへのご意見等は<a href="https://twitter.com/nagi_sg_">こちら</a>まで</p>
+		<p>・万一、当サイトのご利用等により何らかの損害が発生したとしても、当サイトは一切責任を負いません。利用は各自のご判断でお願いいたします。</p>
+		<p></p>
+	</footer>
+	<!-- / #footer -->
+
+</div>
+<!-- / #wrap -->
+
+
+<!--Scripts-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

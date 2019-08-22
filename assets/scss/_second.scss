@@ -1,0 +1,7 @@
+@media (max-width: $BreakPoint1) {
+}
+
+.title_style01{
+  @include font-size(18);
+  line-height: ( 24 / 18 );
+}

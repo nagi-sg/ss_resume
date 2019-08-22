@@ -1,0 +1,92 @@
+//
+// Variables
+// --------------------------------------------------
+
+//color
+$bgColor:#fff;
+$bgColor2:#583a2a;
+
+$textColor:#333;
+
+$linkColor:#0009c4;
+$linkColor_h: #c40300;
+$linkColor_v: #0009c4;
+
+//size
+$baseFontSize:10;
+$innerWidth:1000px;
+
+//BreakPoint
+$BreakPoint1:768px;
+
+//font-family
+//$font_family_mincho:"ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$font_family_mincho:  Georgia, "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+//$font_family_gothic:'ヒラギノ角ゴ Pro W3',Hiragino Kaku Gothic Pro W3,Hiragino Kaku Gothic Pro,'メイリオ',Meiryo,'ＭＳ Ｐゴシック',Verdana,arial,helvetica,clean,sans-serif;
+$font_family_gothic: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font_family_rounded: 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+
+
+
+//
+// Mixin
+// --------------------------------------------------
+@mixin box-sizing($value: border-box) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+@mixin transition($value: 0.3s) {
+  -webkit-transition: $value ease-in-out;
+  transition: $value ease-in-out;
+}
+
+@mixin opacity($value: 0) {
+  $value2: ($value * 100);
+  -webkit-opacity: $value;
+  -moz-opacity: $value;
+  opacity: $value;
+  filter: alpha(opacity= $value2);
+}
+@mixin font-size($value: 10){
+  font-size: $value * 1px;
+  font-size: $value *0.1rem;
+}
+@mixin indent-9999() {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+@mixin gradient($start,$end) {
+  background-color:$start;
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$start, endColorstr=$end);
+  background-image:-moz-linear-gradient(top, $start 0%, $end 100%);
+  background-image:-webkit-linear-gradient(top, $start 0%, $end 100%);
+  background-image:-ms-linear-gradient(top, $start 0%, $end 100%);
+  background-image:linear-gradient(top, $start 0%, $end 100%);
+  background-image:-o-linear-gradient(top, $start 0%, $end 100%);
+  background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,$start), color-stop(100%,$end));
+}
+@mixin font_awesome($code) {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  content: $code;
+}
+
+@function get_vw($size, $viewport:375){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+@mixin font-size-vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}

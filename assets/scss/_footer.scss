@@ -1,0 +1,58 @@
+#footer{
+  background: $bgColor2;
+  color: #fff;
+  padding: 20px 10px;
+
+  margin-top: 30px;
+  @media (max-width: $BreakPoint1) {
+  }
+
+
+  a{
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  p{
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+
+}
+.totop{
+  @include transition();
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  @include opacity(0);
+  pointer-events: none;
+  @include indent-9999();
+
+  &:after{
+    text-indent: 0;
+    display: block;
+    content: "a";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    @include font_awesome("\f077");
+    text-align: center;
+    line-height: 50px;
+    @include font-size(20);
+  }
+}
+
+.scroll{
+  .totop{
+    @include opacity(1);
+    pointer-events: auto;
+    bottom: 100px;
+  }
+}
