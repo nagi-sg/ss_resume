@@ -439,6 +439,10 @@ h2 {
   font-size: 3.73333vw;
 }
 
+.ss_resume_result dl.motive {
+  width: 100%;
+}
+
 .ss_resume_result dl.favorite_episode, .ss_resume_result dl.favorite_content, .ss_resume_result dl.motive, .ss_resume_result dl.comment {
   background: #94714b;
   border: 1px solid #583a2a;
@@ -446,6 +450,7 @@ h2 {
 }
 
 .ss_resume_result dl.favorite_episode dt, .ss_resume_result dl.favorite_content dt, .ss_resume_result dl.motive dt, .ss_resume_result dl.comment dt {
+  width: 100%;
   border-radius: 5px 5px 0 0;
 }
 
@@ -491,8 +496,8 @@ form
 .form_style01 input[type="number"],
 .form_style01 input[type="url"] {
   width: 100%;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   color: #666;
   padding: 5px 10px;
   border: 1px solid #ccc;

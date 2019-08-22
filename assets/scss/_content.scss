@@ -282,6 +282,10 @@ h2{
       }
 
     }
+    &.motive{
+      width: 100%;
+
+    }
 
     &.favorite_episode,
     &.favorite_content,
@@ -293,6 +297,7 @@ h2{
       border-radius: 5px;
 
       dt{
+        width: 100%;
 
         border-radius: 5px 5px 0 0;
 
