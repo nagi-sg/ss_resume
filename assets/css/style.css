@@ -278,6 +278,8 @@ h2 {
   background: #e0c593;
   width: 100%;
   border: 2px solid #ae8d4a;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 .ss_resume_result .result_inner {
@@ -293,7 +295,7 @@ h2 {
   text-align: center;
   font-weight: 700;
   font-size: 24px;
-  font-size: 6.4vw;
+  font-size: 2.4rem;
   color: #583a2a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,6 +307,13 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .ss_resume_result h2 {
+    font-size: 24px;
+    font-size: 6.4vw;
+  }
 }
 
 .ss_resume_result h2 span {
@@ -384,7 +393,14 @@ h2 {
 
 .ss_resume_result dl.rank dd {
   font-size: 15px;
-  font-size: 4vw;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .ss_resume_result dl.rank dd {
+    font-size: 15px;
+    font-size: 4vw;
+  }
 }
 
 .ss_resume_result dl.start {
@@ -397,7 +413,14 @@ h2 {
 
 .ss_resume_result dl.start dd {
   font-size: 14px;
-  font-size: 3.73333vw;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .ss_resume_result dl.start dd {
+    font-size: 14px;
+    font-size: 3.73333vw;
+  }
 }
 
 .ss_resume_result dl.name dt {
@@ -416,7 +439,7 @@ h2 {
   display: inline-block;
   background: #fff;
   font-size: 12px;
-  font-size: 3.2vw;
+  font-size: 1.2rem;
   color: #583a2a;
   border-radius: 7px;
   line-height: 14px;
@@ -429,13 +452,27 @@ h2 {
   bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .ss_resume_result dl.userid dd .follow_back {
+    font-size: 12px;
+    font-size: 3.2vw;
+  }
+}
+
 .ss_resume_result dl.support_character dt, .ss_resume_result dl.favorite_character dt {
   width: 35%;
 }
 
 .ss_resume_result dl.support_character dd, .ss_resume_result dl.favorite_character dd {
   font-size: 14px;
-  font-size: 3.73333vw;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .ss_resume_result dl.support_character dd, .ss_resume_result dl.favorite_character dd {
+    font-size: 14px;
+    font-size: 3.73333vw;
+  }
 }
 
 .ss_resume_result dl.motive {
@@ -456,8 +493,15 @@ h2 {
 .ss_resume_result dl.favorite_episode dd, .ss_resume_result dl.favorite_content dd, .ss_resume_result dl.motive dd, .ss_resume_result dl.comment dd {
   border-radius: 5px;
   font-size: 14px;
-  font-size: 3.73333vw;
+  font-size: 1.4rem;
   line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .ss_resume_result dl.favorite_episode dd, .ss_resume_result dl.favorite_content dd, .ss_resume_result dl.motive dd, .ss_resume_result dl.comment dd {
+    font-size: 14px;
+    font-size: 3.73333vw;
+  }
 }
 
 .ss_resume_result .group1 {
@@ -511,7 +555,7 @@ h2 {
   text-align: center;
   font-weight: 700;
   font-size: 24px;
-  font-size: 6.4vw;
+  font-size: 2.4rem;
   color: #583a2a;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,6 +567,13 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .about_wrap h2 {
+    font-size: 24px;
+    font-size: 6.4vw;
+  }
 }
 
 .about_wrap h2 span {
@@ -540,12 +591,19 @@ h2 {
   color: #583a2a;
   font-weight: 700;
   font-size: 18px;
-  font-size: 4.8vw;
+  font-size: 1.8rem;
   border-top: 2px solid #ae8d4a;
   border-bottom: 2px solid #ae8d4a;
   background: #e0c593;
   width: 100%;
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .about_wrap h3 {
+    font-size: 18px;
+    font-size: 4.8vw;
+  }
 }
 
 .about_wrap h3 span {
@@ -570,6 +628,13 @@ h2 {
 .about_wrap dl dt {
   font-weight: 700;
   text-align: right;
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .about_wrap dl dt {
+    width: 30%;
+  }
 }
 
 .about_wrap dl dt:after {
@@ -577,20 +642,14 @@ h2 {
   padding: 0 5px 0 10px;
 }
 
-.about_wrap dl.update_history dt {
-  width: 30%;
+.about_wrap dl dd {
+  width: calc(100% - 100px);
 }
 
-.about_wrap dl.update_history dd {
-  width: 70%;
-}
-
-.about_wrap dl.creator dt {
-  width: 30%;
-}
-
-.about_wrap dl.creator dd {
-  width: 70%;
+@media (max-width: 768px) {
+  .about_wrap dl dd {
+    width: 70%;
+  }
 }
 
 .about_wrap ul {
@@ -601,8 +660,12 @@ h2 {
   content: "・";
 }
 
-.tweet_btn {
+.about_wrap .tweet_btn {
   text-align: center;
+}
+
+del {
+  text-decoration: line-through;
 }
 
 /*-----------------------------------------------------------

@@ -120,6 +120,8 @@ h2{
   width: 100%;
   border: 2px solid #ae8d4a;
 
+  margin: 0 auto;
+  max-width:480px;
 
 
   .result_inner{
@@ -134,13 +136,15 @@ h2{
   h2{
     text-align: center;
     font-weight: 700;
-    @include font-size-vw(24);
+    @include font-size(24);
     color: #583a2a;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-
+    @media (max-width: $BreakPoint1) {
+      @include font-size-vw(24);
+    }
     span{
       margin: 0 10px;
     }
@@ -218,8 +222,10 @@ h2{
         width: auto;
       }
       dd{
-        @include font-size-vw(15);
-
+        @include font-size(15);
+        @media (max-width: $BreakPoint1) {
+          @include font-size-vw(15);
+        }
       }
 
     }
@@ -230,8 +236,10 @@ h2{
         width: auto;
       }
       dd{
-        @include font-size-vw(14);
-
+        @include font-size(14);
+        @media (max-width: $BreakPoint1) {
+          @include font-size-vw(14);
+        }
       }
     }
 
@@ -254,7 +262,7 @@ h2{
         .follow_back{
           display: inline-block;
           background: #fff;
-          @include font-size-vw(12);
+          @include font-size(12);
           color: #583a2a;
           border-radius: 7px;
           line-height: 14px;
@@ -265,6 +273,11 @@ h2{
           margin: auto;
           top: 0;
           bottom: 0;
+
+          @media (max-width: $BreakPoint1) {
+            @include font-size-vw(12);
+          }
+
         }
       }
     }
@@ -277,8 +290,10 @@ h2{
         width: 35%;
       }
       dd{
-        @include font-size-vw(14);
-
+        @include font-size(14);
+        @media (max-width: $BreakPoint1) {
+          @include font-size-vw(14);
+        }
       }
 
     }
@@ -304,8 +319,12 @@ h2{
       }
       dd{
         border-radius: 5px;
-        @include font-size-vw(14);
+        @include font-size(14);
         line-height: 1.2;
+
+        @media (max-width: $BreakPoint1) {
+          @include font-size-vw(14);
+        }
       }
     }
 
@@ -362,20 +381,21 @@ h2{
 
 .about_wrap{
 
-
   section{
     margin-bottom: 40px;
   }
   h2{
     text-align: center;
     font-weight: 700;
-    @include font-size-vw(24);
+    @include font-size(24);
     color: #583a2a;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-
+    @media (max-width: $BreakPoint1) {
+      @include font-size-vw(24);
+    }
     span{
       margin: 0 10px;
     }
@@ -397,12 +417,16 @@ h2{
   h3{
     color: #583a2a;
     font-weight: 700;
-    @include font-size-vw(18);
+    @include font-size(18);
     border-top: 2px solid #ae8d4a;
     border-bottom: 2px solid #ae8d4a;
     background: #e0c593;
     width: 100%;
     margin-bottom: 15px;
+
+    @media (max-width: $BreakPoint1) {
+      @include font-size-vw(18);
+    }
 
 
     span{
@@ -414,9 +438,9 @@ h2{
       height: 100%;
 
     }
-
-
   }
+
+
   dl{
     margin: 0 20px;
     display: flex;
@@ -424,32 +448,30 @@ h2{
     dt{
       font-weight: 700;
       text-align: right;
+      width: 100px;
+
+      @media (max-width: $BreakPoint1) {
+        width: 30%;
+      }
+
       &:after{
         content: ":";
         padding: 0 5px 0 10px;
       }
     }
     dd{
-
-    }
-    &.update_history{
-      dt{
-        width: 30%;
-
-      }
-      dd{
+      width: calc(100% - 100px);
+      @media (max-width: $BreakPoint1) {
         width: 70%;
       }
-    }
-    &.creator{
-      dt{
-        width: 30%;
+      &.update_history{
 
       }
-      dd{
-        width: 70%;
+      &.creator{
+
       }
     }
+
   }
   ul{
     margin: 0 20px;
@@ -459,8 +481,10 @@ h2{
       }
     }
   }
+  .tweet_btn{
+    text-align: center;
+  }
 }
-
-.tweet_btn{
-  text-align: center;
+del{
+  text-decoration: line-through	;
 }
