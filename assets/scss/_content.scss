@@ -332,4 +332,135 @@ h2{
 .howto{
   text-align: center;
   padding: 20px 0;
+
+}
+.menu{
+  text-align: center;
+  padding: 20px 0;
+
+  li{
+    display: inline-block;
+
+    a{
+      color: #583a2a;
+
+    }
+
+    &:first-child{
+      &:after{
+        content: "|";
+        display: inline-block;
+        padding: 0 5px;
+      }
+    }
+
+  }
+}
+
+
+
+
+.about_wrap{
+
+
+  section{
+    margin-bottom: 40px;
+  }
+  h2{
+    text-align: center;
+    font-weight: 700;
+    @include font-size-vw(24);
+    color: #583a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+
+    span{
+      margin: 0 10px;
+    }
+
+    &:before,
+    &:after{
+      content: "";
+      background: #583a2a;
+      width: get_vw(20);
+      height: 2px;
+    }
+
+
+    &:before{
+    }
+    &:after{
+    }
+  }
+  h3{
+    color: #583a2a;
+    font-weight: 700;
+    @include font-size-vw(18);
+    border-top: 2px solid #ae8d4a;
+    border-bottom: 2px solid #ae8d4a;
+    background: #e0c593;
+    width: 100%;
+    margin-bottom: 15px;
+
+
+    span{
+      display: block;
+      padding: 10px;
+      position: relative;
+      background: #fef4dc;
+      box-shadow: 0 0 10px 10px rgba(174,141,74,0.4) inset;
+      height: 100%;
+
+    }
+
+
+  }
+  dl{
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    dt{
+      font-weight: 700;
+      text-align: right;
+      &:after{
+        content: ":";
+        padding: 0 5px 0 10px;
+      }
+    }
+    dd{
+
+    }
+    &.update_history{
+      dt{
+        width: 30%;
+
+      }
+      dd{
+        width: 70%;
+      }
+    }
+    &.creator{
+      dt{
+        width: 30%;
+
+      }
+      dd{
+        width: 70%;
+      }
+    }
+  }
+  ul{
+    margin: 0 20px;
+    li{
+      &:before{
+        content: "・";
+      }
+    }
+  }
+}
+
+.tweet_btn{
+  text-align: center;
 }

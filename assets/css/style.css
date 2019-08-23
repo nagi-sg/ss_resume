@@ -65,7 +65,6 @@ footer
   background: #583a2a;
   color: #fff;
   padding: 20px 10px;
-  margin-top: 30px;
 }
 
 #footer a {
@@ -483,6 +482,127 @@ h2 {
 .howto {
   text-align: center;
   padding: 20px 0;
+}
+
+.menu {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li a {
+  color: #583a2a;
+}
+
+.menu li:first-child:after {
+  content: "|";
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.about_wrap section {
+  margin-bottom: 40px;
+}
+
+.about_wrap h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 6.4vw;
+  color: #583a2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.about_wrap h2 span {
+  margin: 0 10px;
+}
+
+.about_wrap h2:before, .about_wrap h2:after {
+  content: "";
+  background: #583a2a;
+  width: 5.33333vw;
+  height: 2px;
+}
+
+.about_wrap h3 {
+  color: #583a2a;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 4.8vw;
+  border-top: 2px solid #ae8d4a;
+  border-bottom: 2px solid #ae8d4a;
+  background: #e0c593;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.about_wrap h3 span {
+  display: block;
+  padding: 10px;
+  position: relative;
+  background: #fef4dc;
+  -webkit-box-shadow: 0 0 10px 10px rgba(174, 141, 74, 0.4) inset;
+  box-shadow: 0 0 10px 10px rgba(174, 141, 74, 0.4) inset;
+  height: 100%;
+}
+
+.about_wrap dl {
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.about_wrap dl dt {
+  font-weight: 700;
+  text-align: right;
+}
+
+.about_wrap dl dt:after {
+  content: ":";
+  padding: 0 5px 0 10px;
+}
+
+.about_wrap dl.update_history dt {
+  width: 30%;
+}
+
+.about_wrap dl.update_history dd {
+  width: 70%;
+}
+
+.about_wrap dl.creator dt {
+  width: 30%;
+}
+
+.about_wrap dl.creator dd {
+  width: 70%;
+}
+
+.about_wrap ul {
+  margin: 0 20px;
+}
+
+.about_wrap ul li:before {
+  content: "・";
+}
+
+.tweet_btn {
+  text-align: center;
 }
 
 /*-----------------------------------------------------------
